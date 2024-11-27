@@ -26,11 +26,14 @@ function mergesorthelper(array, left, middle, right) {
 function mergesort(array) {
     var length = array.length;
 
+    // control size of subarrays, doubling each time until it spans entire array
     for (size = 1; size < length; size *= 2) {
+        // select adjacent subarrays of size "size" (subtle I know) to merge as long as there is room
         for (left = 0; left < length - size; left += 2 * size) {
             var middle = Math.min(left + size - 1, length - 1);
             var right = Math.min(left + 2 * size - 1, length - 1);
 
+            // helper function to do the whole merge sorting business
             mergesorthelper(array, left, middle, right);
         }
     }
