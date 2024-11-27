@@ -1,4 +1,4 @@
-function mergesorthelper(array, left, middle, rigth) {
+function mergesorthelper(array, left, middle, right) {
     var x = left;
     var y = middle + 1;
 
