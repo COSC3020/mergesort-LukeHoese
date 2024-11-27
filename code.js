@@ -29,7 +29,7 @@ function mergesort(array) {
     for (size = 1; size < length; size *= 2) {
         for (left = 0; left < length - size; left += 2 * size) {
             var middle = Math.min(left + size - 1, length - 1);
-            var right = Math.min(left + 2 * size - 1, n - 1);
+            var right = Math.min(left + 2 * size - 1, length - 1);
 
             mergesorthelper(array, left, middle, right);
         }
