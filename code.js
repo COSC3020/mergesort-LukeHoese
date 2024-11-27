@@ -2,18 +2,24 @@ function mergesorthelper(array, left, middle, right) {
     var x = left;
     var y = middle + 1;
 
+    // iterate over both subarrays, ensuring you do not go beyond
     while (x <= middle && y <= right) {
+        // already in correct position, move on
         if (array[x] <= array[y]) {
             x++;
         }
+        // not in correct position
         else {
+            // save lower value in temp
             var temp = array[y];
             var z = y;
 
+            // shift elements to make room
             while (z > x) {
                 array[z] = array[z - 1];
                 z--;
             }
+            // insert temp back into array in correct position
             array[x] = temp;
 
             x++;
