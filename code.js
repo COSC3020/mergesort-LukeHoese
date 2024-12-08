@@ -1,14 +1,16 @@
+// our left subarray will go from left to middle, and our right subarray will go from middle + 1 to right
 function mergesorthelper(array, left, middle, right) {
+    // initialize x to be leftmost index of left "subarray" and y to leftmost index of right "subarray"
     var x = left;
     var y = middle + 1;
 
-    // iterate over both subarrays, ensuring you do not go beyond
+    // iterate over both subarrays, ensuring you do not go beyond by terminating loop when x and y reach the rightmost element of their subarrays
     while (x <= middle && y <= right) {
         // already in correct position, move on
         if (array[x] <= array[y]) {
             x++;
         }
-        // not in correct position
+        // not in correct position 
         else {
             // save lower value in temp
             var temp = array[y];
