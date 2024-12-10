@@ -15,13 +15,13 @@ Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
-$\Theta$ bound for my implementation (and other mergesort implementations) is $\Theta$(nlog(n))
-For my implementation this is because the outer loop works over arrays that double in size each loop
-halfing the amount of time taken each loop, leading to a time complexity of log(n)
-The inner loop takes linear time as it iterates over all elements of the array each pass
-to compare and sort during the merge process.
-Thus we do $\Theta$(n) work $\Theta$(log(n)) times, making the resulting time complexity:
-$\Theta$(nlog(n))
+Worst case asymptotic complexity would be when every merge requires the entire array to be shifted, which would occur for a reverse sorted array.
+It can be broken down as:  
+log(n) levels of recursion
+(n) time to merge at each level
+(n) time to shift array
+multiplying these gives n<sup>2</sup>(log(n))
+giving us a final worst case time complexity of $\Theta$(n<sup>2</sup>(log(n)))
 
 ChatGPT helped write the code within the original mergesort function, specifically the idea of breaking our problem down to subarrays of size one and doubling at each step instead of the typical recursion of breaking the problem in half at each step. It also helped with some simple syntax stuff such as shifting the values in the array to make it in place. Having now completed almost all of the required programs for this class this seems like very trivial things to have needed aid for and I'm confident I could now complete this assignment with much less help, but wanted to be fully transparent about the help I received at the time of completion.
 
