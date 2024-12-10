@@ -23,8 +23,7 @@ to compare and sort during the merge process.
 Thus we do $\Theta$(n) work $\Theta$(log(n)) times, making the resulting time complexity:
 $\Theta$(nlog(n))
 
-I used the lecture material, as well as a previous mergesort I had worked with as a base
-for my code and had chatGPT's help adjusting it to work in place.
+ChatGPT helped write the code within the original mergesort function, specifically the idea of breaking our problem down to subarrays of size one and doubling at each step instead of the typical recursion of breaking the problem in half at each step. It also helped with some simple syntax stuff such as shifting the values in the array to make it in place. Having now completed almost all of the required programs for this class this seems like very trivial things to have needed aid for and I'm confident I could now complete this assignment with much less help, but wanted to be fully transparent about the help I received at the time of completion.
 
 I certify that I have listed all sources used to complete this exercise, including the use
 of any Large Language Models. All of the work is my own, except where stated
